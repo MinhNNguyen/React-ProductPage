@@ -8,7 +8,56 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+#contaier {
+  height: 100%;
+  width: 100%;
+}
+
+.card-header {
+  padding: 0;
+}
+
+.item-page {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.item-card {
+  width: 22%;
+  margin: 0.5%;
+  border-radius: 10px;
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+}
+
+.hero-image img {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.hero-image h2 {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  width: 100%;
+}
+
+.hero-image h2 span {
+  color: white; 
+  font: bold 14px/26px Helvetica, Sans-Serif; 
+  letter-spacing: -1px;  
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px;
+  border-radius: 5px; 
+}
+
+.footer {
+  height: 2.5%;
 }
