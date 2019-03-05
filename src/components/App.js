@@ -3,11 +3,9 @@ import ItemPage from './ItemPage'
 
 class App extends Component {
 
-  // Install proptypes
-
   render() {
     return (
-        <ItemPage />
+      <ItemPage />
     )
   }
 }
