@@ -21,7 +21,7 @@ class Item extends Component {
   }
 
   render() {
-    const { id, name, hero, images, priceRange, thumbnail } = this.props.item 
+    const { id, name, hero, images, priceRange } = this.props.item 
     const fixedName = name.replace("Fibrosoft&#8482; ","")
 
     const price = Math.round(Math.random() * (priceRange.selling.high - priceRange.selling.low))
@@ -39,7 +39,7 @@ class Item extends Component {
                   <Carousel.Item key={image.href}>
                     <img
                       src={image.href}
-                      alt={`Image`}
+                      alt={`Image of ${fixedName}`}
                       className="d-block w-100"
                       onClick={this.openCarousel} />
                   </Carousel.Item>
@@ -51,7 +51,7 @@ class Item extends Component {
         <Card.Header>
         <div className="hero-image">
             <img src={hero.href}
-              alt={`Picture of ${fixedName}`}
+              alt={`Image of ${fixedName}`}
               className=""
               onClick={this.openCarousel} />
               <h2><span>$ {price}</span></h2>

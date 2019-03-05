@@ -33,6 +33,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "react-dev-utils": "^7.0.3"
   }
 }
