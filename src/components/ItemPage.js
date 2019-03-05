@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import itemData from '../product-input.json'
+import itemData from '../helpers/product-input.json'
 import Item from './Item'
-import { Navbar, Nav } from 'react-bootstrap'
+import Footer from './Footer'
+import NavigationBar from './NavigationBar'
 
 class ItemPage extends Component {
   state = {
@@ -15,40 +16,17 @@ class ItemPage extends Component {
 
   render() {
     const { items } = this.state
-
     return (
       <div id="container">
-        <Navbar 
-          bg="dark" 
-          variant="dark">
-          <Navbar.Brand>Product Listing</Navbar.Brand>
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mr-auto">
-              <Nav.Link>Categories</Nav.Link>
-              <Nav.Link>Items</Nav.Link>
-            </Nav>
-            <Nav>
-              <Nav.Link>Profile</Nav.Link>
-              <Nav.Link>Sign Out</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-        <ul className="item-page">
+        <NavigationBar />
+        <ul className="col-xs-12 col-sm-11 col-lg-11 item-page">
           {
             items.groups.map( (item) => (
               <Item key={item.id} item={item} />
             ))
           }
         </ul>
-        <Navbar 
-          bg="dark" 
-          variant="dark" 
-          fixed="bottom"
-          className="footer">
-          <Navbar.Brand>
-            Produced By Robert Nguyen@2019
-          </Navbar.Brand>
-        </Navbar>
+        <Footer />
       </div>
     )
   }

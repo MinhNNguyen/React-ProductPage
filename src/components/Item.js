@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import { Modal, Card } from 'react-bootstrap' 
+import PropTypes from 'prop-types'
 
 class Item extends Component {
   state = {
@@ -27,7 +28,7 @@ class Item extends Component {
                   + priceRange.selling.low 
     console.log(this.props.item)
     return (
-        <Card className="item-card">
+        <Card className=" col-xs-10 col-sm-6 col-lg-4 item-card">
           <Modal 
             show={this.state.showModal}
             onHide={this.closeCarousel}>
@@ -67,6 +68,13 @@ class Item extends Component {
         </Card>
     )
   }
+}
+
+/* Define properties types */
+
+Item.propTypes = {
+  key: PropTypes.string.isRequired,
+  item: PropTypes.object.isRequired
 }
 
 export default Item
